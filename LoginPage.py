@@ -9,8 +9,6 @@ import tkinter.messagebox as tm
 
 def LoginClick():
 	Content = os.system('curl "http://192.241.244.177/ChatApplication/CheckLogin.php?UserId=" + UserId.get() + "Password=" + Password.get()"')
-	# Content = urlopen("http://192.241.244.177/ChatApplication/CheckLogin.php?UserId=" + UserId.get() + "Password=" + Password.get())
-	# print(Content)
 	for Attributes in Content:
 		print(Attributes)
 		# if Attributes == 1:
