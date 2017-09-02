@@ -9,8 +9,6 @@ import tkinter.messagebox as tm
 
 def LoginClick():
 	Content = os.system('curl "http://192.241.244.177/ChatApplication/CheckLogin.php?UserId=" + UserId.get() + "Password=" + Password.get()"')
-	# Content = urlopen("http://192.241.244.177/ChatApplication/CheckLogin.php?UserId=" + UserId.get() + "Password=" + Password.get())
-	# print(Content)
 	for Attributes in Content:
 		print(Attributes)
 		# if Attributes == 1:
@@ -39,4 +37,3 @@ Password = Entry(root, show = "*")
 UserId.grid(row = 1, column = 1)
 Password.grid(row = 2, column = 1)
 Login = Button(root, text = "Login", fg = "blue", command = LoginClick).grid(row = 3, column = 1)
-root.mainloop()
